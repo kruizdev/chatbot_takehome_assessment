@@ -16,11 +16,11 @@ Timebox: ~6–8 focused hours (hard-but-fair).
 
 ## Getting started
 ```bash
-python -m venv .venv && source .venv/bin/activate
+python3.12 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-pytest -q
+pytest -q OR python -m pytest -q 
 # You'll see some failing tests (by design).
-uvicorn app.main:app --reload
+uvicorn app.main:app --reload (will not work initially, by design. go to http://127.0.0.1:8000/docs to check if it's working)
 ```
 
 ### Run a quick smoke
@@ -73,12 +73,29 @@ curl -X POST http://localhost:8787/chat   -H "Content-Type: application/json"   
 - `tests/integration/streaming_test.py`: streaming contract (xfail).
 
 ## Deliverables
-- All tests green (except xfail-marked).
-- Answers in README under **Design Answers**.
-- Optional: brief Loom or markdown walkthrough.
-
-## Design Answers (fill in)
-- **α choice (hybrid)**: …
-- **Memory truncation policy**: …
-- **Safety FP/FN tradeoffs**: …
-- **Next productionization steps**: …
+What You Deliver
+	1.	Working code that passes all visible tests:
+	•	pnpm test (or npm test / pytest) must be green.
+	2.	Answers to 4 short design prompts in README.md:
+	•	(a) How you chose α (hybrid weight) and tradeoffs.
+	•	(b) Memory truncation policy rationale.
+	•	(c) Safety false-positive/negative considerations.
+	•	(d) What you’d productionize next and why.
+	3.	A 5–8 minute walking through:
+	•	file changes,
+	•	how to run locally,
+	•	how you debugged one failing test.
+ 
+## Scoring Rubric
+Scoring Rubric (100 pts)
+	•	Correctness (40 pts)
+Retrieval gains vs baseline (15), memory correctness (10), tool call flow (10), rate limit (5).
+	•	Reliability & Safety (20 pts)
+Redaction coverage (10), no PII in logs (5), graceful errors (5).
+	•	Code Quality (20 pts)
+Types, small functions, comments where needed, test names clear.
+	•	Performance (10 pts)
+Retriever latency & memory ops within provided thresholds.
+	•	Design Reasoning (10 pts)
+ 
+Clear tradeoffs in README answers.
