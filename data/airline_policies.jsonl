@@ -1,0 +1,3 @@
+{"id": "delta_dog_1", "airline": "delta", "pet_types": ["dog", "cat"], "summary": "Delta allows small dogs and cats in cabin with an approved soft-sided crate. Fees apply.", "tags": ["crate", "in_cabin"], "url": "https://www.delta.com/pet-policy"}
+{"id": "united_cat_1", "airline": "united", "pet_types": ["cat"], "summary": "United accepts cats in-cabin; pet must remain in carrier under the seat.", "tags": ["in_cabin"], "url": "https://www.united.com/pet-policy"}
+{"id": "delta_rules_crate", "airline": "delta", "pet_types": ["dog"], "summary": "Crate must be leak-proof and ventilated on at least two sides.", "tags": ["crate"], "url": "https://www.delta.com/pet-policy#crates"}
