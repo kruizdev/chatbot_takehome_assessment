@@ -83,7 +83,7 @@ curl -X POST http://localhost:8000/chat   -H "Content-Type: application/json"   
    - (c) Safety false-positive/negative considerations  
    - (d) What you’d productionize next and why  
 
-3. **A 5–8 minute walkthrough** (recording or markdown write-up)
+3. **A 5–8 minute walkthrough**
    - File changes  
    - How to run locally  
    - How you debugged one failing test  
