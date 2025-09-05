@@ -74,29 +74,44 @@ curl -X POST http://localhost:8787/chat   -H "Content-Type: application/json"   
 - `tests/integration/streaming_test.py`: streaming contract (xfail).
 
 ## Deliverables
-What You Deliver
-	1.	Working code that passes all visible tests:
-	•	pnpm test (or npm test / pytest) must be green.
-	2.	Answers to 4 short design prompts in README.md:
-	•	(a) How you chose α (hybrid weight) and tradeoffs.
-	•	(b) Memory truncation policy rationale.
-	•	(c) Safety false-positive/negative considerations.
-	•	(d) What you’d productionize next and why.
-	3.	A 5–8 minute walking through:
-	•	file changes,
-	•	how to run locally,
-	•	how you debugged one failing test.
- 
-## Scoring Rubric
-Scoring Rubric (100 pts)
-	•	Correctness (40 pts)
-Retrieval gains vs baseline (15), memory correctness (10), tool call flow (10), rate limit (5).
-	•	Reliability & Safety (20 pts)
-Redaction coverage (10), no PII in logs (5), graceful errors (5).
-	•	Code Quality (20 pts)
-Types, small functions, comments where needed, test names clear.
-	•	Performance (10 pts)
-Retriever latency & memory ops within provided thresholds.
-	•	Design Reasoning (10 pts)
- 
-Clear tradeoffs in README answers.
+1. **Working code that passes all visible tests**
+   - `pytest` must be green.
+
+2. **Answers to 4 short design prompts in `README.md`**
+   - (a) How you chose **α (hybrid weight)** and tradeoffs  
+   - (b) Memory truncation policy rationale  
+   - (c) Safety false-positive/negative considerations  
+   - (d) What you’d productionize next and why  
+
+3. **A 5–8 minute walkthrough** (recording or markdown write-up)
+   - File changes  
+   - How to run locally  
+   - How you debugged one failing test  
+
+---
+
+## Scoring Rubric (100 pts)
+
+### Correctness — 40 pts
+- Retrieval gains vs baseline (15)  
+- Memory correctness (10)  
+- Tool call flow (10)  
+- Rate limit (5)  
+
+### Reliability & Safety — 20 pts
+- Redaction coverage (10)  
+- No PII in logs (5)  
+- Graceful errors (5)  
+
+### Code Quality — 20 pts
+- Typed functions and clear structure  
+- Small, focused functions  
+- Comments where needed  
+- Clear and descriptive test names  
+
+### Performance — 10 pts
+- Retriever latency within thresholds  
+- Memory operations within thresholds  
+
+### Design Reasoning — 10 pts
+- Clear tradeoffs explained in README answers  
