@@ -26,7 +26,7 @@ uvicorn app.main:app --reload
 
 ### Run a quick smoke
 ```bash
-curl -X POST http://localhost:8787/chat   -H "Content-Type: application/json"   -d @tests/fixtures/minimal.json
+curl -X POST http://localhost:8000/chat   -H "Content-Type: application/json"   -d @tests/fixtures/minimal.json
 ```
 
 ## Repo layout
