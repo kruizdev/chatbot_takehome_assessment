@@ -20,7 +20,8 @@ python3.12 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 pytest -q OR python -m pytest -q 
 # You'll see some failing tests (by design).
-uvicorn app.main:app --reload (will not work initially, by design. go to http://127.0.0.1:8000/docs to check if it's working)
+uvicorn app.main:app --reload
+# Will not work initially, by design. Go to http://127.0.0.1:8000/docs to check if it's working
 ```
 
 ### Run a quick smoke
